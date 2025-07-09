@@ -4,6 +4,14 @@ public class ScryfallDesktop{
         //Initialize the GUI and the API data
         Data data = new Data();
         GUI gui = new GUI();
+
+        try {
+            data.getRequest("/sets/aer");
+        } catch (Exception e) {
+            System.out.println("Request Failed");
+        }
+        
+        data.printResponse();
         
     }
 }
